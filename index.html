@@ -1,66 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Praful Mishra | Unreal Engine Developer</title>
+    <title>Praful Mishra - Unreal Engine Developer</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f5f5f5; color: #333; }
-        header { background: #0b0b45; color: white; padding: 2rem 1rem; text-align: center; }
-        nav { margin-top: 1rem; }
-        nav a { color: white; margin: 0 1rem; text-decoration: none; font-weight: bold; }
-        section { padding: 2rem; max-width: 1000px; margin: auto; }
-        .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
-        .project { background: white; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-        footer { text-align: center; padding: 1rem; background: #0b0b45; color: white; margin-top: 2rem; }
-        a.button { display: inline-block; padding: 0.5rem 1rem; background: #0b0b45; color: white; border-radius: 4px; text-decoration: none; margin-top: 1rem; }
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1100px;
+            margin: 2rem auto;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .left-column {
+            width: 30%;
+            background-color: #001f3f;
+            color: #fff;
+            padding: 2rem;
+        }
+
+        .right-column {
+            width: 70%;
+            padding: 2rem;
+        }
+
+        .left-column a {
+            color: #7FDBFF;
+            text-decoration: none;
+            display: block;
+            margin: 0.5rem 0;
+        }
+
+        h1,
+        h2 {
+            color: #001f3f;
+        }
+
+        h2 {
+            border-bottom: 2px solid #0074D9;
+            padding-bottom: 0.3rem;
+        }
+
+        ul {
+            padding-left: 1.2rem;
+        }
+
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #0074D9;
+        }
     </style>
 </head>
+
 <body>
+    <div class="container">
+        <div class="left-column">
+            <h2>Contact</h2>
+            <p>Praful Mishra</p>
+            <p>Nagpur, India</p>
+            <a href="mailto:prafulmishra0203@gmail.com">prafulmishra0203@gmail.com</a>
+            <p>+91 7020670423</p>
+            <a href="https://bit.ly/prafulmishra-portfolio">Portfolio</a>
+            <a href="http://github.com/praful0203">GitHub</a>
+            <a href="http://linkedin.com/in/praful0203">LinkedIn</a>
 
-<header>
-    <h1>Praful Mishra</h1>
-    <p>Unreal Engine Developer | XR | VR/AR | Metaverse</p>
-    <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
-</header>
+            <h2>Skills</h2>
+            <ul>
+                <li><strong>Unreal Engine:</strong> Blueprints, C++, Datasmith, Pixel Streaming, Replication, REST APIs,
+                    UMG, Meta XR SDK, Meta XR Interaction SDK, OpenXR, Ultraleap, Point Cloud Data</li>
+                <li><strong>Unity 3D:</strong> ARFoundation, C#, Google ARCore, MRTK</li>
+                <li><strong>Android:</strong> Android SDK, Couchbase, Dagger2, Espresso, Firebase, Java, JUnit, Kotlin,
+                    KTor, Mockito, MVVM, RxJava, Sceneform SDK, SQLite</li>
+            </ul>
 
-<section id="about">
-    <h2>About Me</h2>
-    <p>Passionate Unreal Engine Developer with expertise in XR, VR/AR, and Metaverse technologies. I specialize in building immersive experiences, performance-optimized applications, and intuitive XR interactions using C++, Blueprints, and leading SDKs. Always learning, always building.</p>
-</section>
-
-<section id="projects">
-    <h2>Projects</h2>
-    <div class="projects">
-        <div class="project">
-            <h3>Hand-Tracked VR Menu Interaction</h3>
-            <p>Built intuitive UI navigation using hand tracking for Quest 3 using Unreal Engine and Meta Interaction SDK.</p>
+            <h2>Certifications & Awards</h2>
+            <ul>
+                <li>UX Certification – Interaction Design Foundation</li>
+                <li>Semi-Finalist – XR Creator Hackathon (2025 – BharatXR, Wavelaps, Ministry of I&B)</li>
+                <li>League Extraordinaire Award – Globallogic (2023 & 2024)</li>
+                <li>Top 3 – 30Hacks, APAC Region (2022)</li>
+                <li>Top 20 (12th Rank) – Hack20 Global Flutter Hackathon (2020)</li>
+            </ul>
         </div>
-        <div class="project">
-            <h3>Performance-Optimized VR Museum Tour</h3>
-            <p>Developed a VR application showcasing historical locations with optimized assets and smooth PCVR performance.</p>
-        </div>
-        <div class="project">
-            <h3>AR Annotation System for Digital Twin VR</h3>
-            <p>Created interactive annotation labels for 3D container models in AR/VR environments for better data visualization.</p>
+
+        <div class="right-column">
+            <h1>Praful Mishra</h1>
+            <p><strong>Unreal Engine Developer | XR & Metaverse Enthusiast</strong></p>
+
+            <div class="section">
+                <h2>Summary</h2>
+                <p>Skilled Unreal Engine Developer with 2+ years of experience in XR, Metaverse, and Digital Twins using
+                    UE5, plus over 4 years in Android development. Known for delivering high-performance, immersive
+                    applications focusing on interactivity, optimization, and cross-platform XR design. Experienced in
+                    providing simulations and virtual experiences for enterprise use cases.</p>
+            </div>
+
+            <div class="section">
+                <h2>Work Experience</h2>
+                <h3>Associate Consultant – Unreal Engine Developer</h3>
+                <p><em>Globallogic, Nagpur | Aug 2019 – May 2025</em></p>
+                <ul>
+                    <li>Built immersive XR experiences using UE5 for industrial training, real estate, and simulation.
+                    </li>
+                    <li>Developed hand-tracked UI systems and performance-optimized applications for Meta Quest.</li>
+                    <li>Delivered scalable Android apps with Kotlin, MVVM, and CI/CD tools like Jenkins & AWS.</li>
+                </ul>
+
+                <h3>Software Engineer Trainee – Android Developer</h3>
+                <p><em>Mobileways, Hyderabad | Jul 2018 – Jan 2019</em></p>
+                <ul>
+                    <li>Built location and messaging apps with real-time backend integrations.</li>
+                    <li>Focused on performance, modularity, and responsive UI design.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Projects</h2>
+                <ul>
+                    <li><strong>Nuclear Energy Plant Metaverse:</strong> VR experience for global powerplant ops and
+                        training powered by GenAI.</li>
+                    <li><strong>Real Estate XR:</strong> Immersive VR experience for construction process review and
+                        client demos.</li>
+                    <li><strong>DigitalTwinVR:</strong> Interactive annotation system for 3D models in VR.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Education</h2>
+                <p><strong>Bachelor of Engineering in Computer Science</strong><br>
+                    Guru Nanak Institute of Engineering and Technology, Nagpur, India | Jul 2014 – Jun 2018</p>
+                <p><strong>HSC (12th)</strong><br>
+                    Kedar Singh Intermediate College, Kanpur, India | Mar 2014</p>
+            </div>
         </div>
     </div>
-</section>
-
-<section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:prafulmishra0203@gmail.com">prafulmishra0203@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/praful0203" target="_blank">linkedin.com/in/praful0203</a></p>
-    <p>GitHub: <a href="https://github.com/praful0203" target="_blank">github.com/praful0203</a></p>
-</section>
-
-<footer>
-    <p>Made with ❤️ by Praful Mishra</p>
-</footer>
-
 </body>
+
 </html>
