@@ -1,158 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Praful Mishra - Unreal Engine Developer</title>
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f7fa;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        .container {
-            display: flex;
-            max-width: 1100px;
-            margin: 2rem auto;
-            background: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .left-column {
-            width: 30%;
-            background-color: #001f3f;
-            color: #fff;
-            padding: 2rem;
-        }
-
-        .right-column {
-            width: 70%;
-            padding: 2rem;
-        }
-
-        .left-column a {
-            color: #7FDBFF;
-            text-decoration: none;
-            display: block;
-            margin: 0.5rem 0;
-        }
-
-        h1,
-        h2 {
-            color: #001f3f;
-        }
-
-        h2 {
-            border-bottom: 2px solid #0074D9;
-            padding-bottom: 0.3rem;
-        }
-
-        ul {
-            padding-left: 1.2rem;
-        }
-
-        .section {
-            margin-bottom: 2rem;
-        }
-
-        .highlight {
-            font-weight: bold;
-            color: #0074D9;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Praful Mishra — Senior Android Developer</title>
+<meta name="description" content="Praful Mishra — Senior Android Developer, Automotive & Connected Systems">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0d1210; --surface:#141a17; --surface2:#1b2320; --border:#28322c;
+  --text:#e6ece8; --muted:#8fa89a;
+  --green:#3ddc84; --purple:#a97bff; --amber:#f2b84b; --blue:#6fb1ff;
+  --mono:'JetBrains Mono',monospace; --sans:'Inter',sans-serif;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg); color:var(--text); font-family:var(--sans); line-height:1.6;}
+a{color:var(--blue); text-decoration:none;}
+a:hover{text-decoration:underline;}
+.window{max-width:1100px; margin:24px auto; border:1px solid var(--border); border-radius:10px; overflow:hidden; box-shadow:0 20px 60px rgba(0,0,0,.4);}
+.titlebar{background:var(--surface2); padding:10px 16px; display:flex; align-items:center; gap:8px; border-bottom:1px solid var(--border);}
+.dot{width:11px; height:11px; border-radius:50%;}
+.dot.r{background:#ff5f56;} .dot.y{background:#ffbd2e;} .dot.g{background:#27c93f;}
+.filename{margin-left:12px; font-family:var(--mono); font-size:.82rem; color:var(--muted);}
+.body{display:flex; min-height:600px;}
+nav.sidebar{width:210px; background:var(--surface); border-right:1px solid var(--border); padding:18px 0; flex-shrink:0;}
+nav.sidebar a{display:block; font-family:var(--mono); font-size:.85rem; color:var(--muted); padding:9px 20px; border-left:2px solid transparent;}
+nav.sidebar a:hover, nav.sidebar a.active{color:var(--green); border-left-color:var(--green); background:rgba(61,220,132,.06); text-decoration:none;}
+main{flex:1; padding:40px 48px; max-width:720px;}
+section{margin-bottom:64px; scroll-margin-top:20px;}
+.kw{color:var(--green); font-weight:600;}
+.str{color:var(--amber);}
+.ann{color:var(--purple);}
+.cmt{color:var(--muted);}
+code, .mono{font-family:var(--mono);}
+h1{font-family:var(--mono); font-size:1.9rem; color:var(--text); margin-bottom:6px;}
+h2{font-family:var(--mono); font-size:1.15rem; color:var(--text); margin-bottom:20px; padding-bottom:10px; border-bottom:1px solid var(--border);}
+.tagline{font-family:var(--mono); color:var(--green); font-size:.95rem; margin-bottom:22px;}
+.code-block{background:var(--surface2); border:1px solid var(--border); border-radius:8px; padding:20px 24px; font-family:var(--mono); font-size:.88rem; line-height:1.85;}
+.bio p{margin-top:14px; font-size:.98rem;}
+.commit{display:flex; gap:14px; padding:16px 0; border-bottom:1px solid var(--border);}
+.commit:last-child{border-bottom:none;}
+.commit-dot{width:9px; height:9px; border-radius:50%; background:var(--green); margin-top:7px; flex-shrink:0;}
+.commit-body .role{font-family:var(--mono); font-weight:600; font-size:.95rem; color:var(--text);}
+.commit-body .meta{font-family:var(--mono); font-size:.78rem; color:var(--muted); margin:3px 0 8px;}
+.commit-body .desc{font-size:.92rem; color:var(--text);}
+.proj{border-left:2px solid var(--purple); padding:10px 0 10px 16px; margin-bottom:18px;}
+.proj .name{font-family:var(--mono); color:var(--purple); font-size:.92rem; font-weight:600;}
+.proj .desc{font-size:.9rem; margin-top:4px;}
+.awards{list-style:none;}
+.awards li{padding:8px 0; border-bottom:1px solid var(--border); font-size:.92rem;}
+.awards li:last-child{border-bottom:none;}
+.awards .name{color:var(--amber); font-family:var(--mono); font-size:.88rem;}
+.terminal{background:#0a0e0c; border:1px solid var(--border); border-radius:8px; padding:20px 24px; font-family:var(--mono); font-size:.88rem;}
+.terminal .prompt{color:var(--green);}
+.terminal .row{display:flex; gap:10px; margin:4px 0; color:var(--text);}
+.terminal .label{color:var(--muted); width:80px; flex-shrink:0;}
+.cursor{display:inline-block; width:8px; height:15px; background:var(--green); margin-left:4px; animation:blink 1s step-end infinite; vertical-align:middle;}
+@keyframes blink{50%{opacity:0;}}
+footer{padding:20px 48px; border-top:1px solid var(--border); font-family:var(--mono); font-size:.78rem; color:var(--muted);}
+.mobilenav{display:none;}
+@media (max-width:760px){
+  .body{flex-direction:column;}
+  nav.sidebar{display:none;}
+  .mobilenav{display:flex; overflow-x:auto; background:var(--surface); border-bottom:1px solid var(--border); padding:10px 12px; gap:18px;}
+  .mobilenav a{font-family:var(--mono); font-size:.8rem; color:var(--muted); white-space:nowrap;}
+  main{padding:28px 22px;}
+  .window{margin:0; border-radius:0; border-left:none; border-right:none;}
+}
+</style>
 </head>
-
 <body>
-    <div class="container">
-        <div class="left-column">
-            <h2>Contact</h2>
-            <p>Praful Mishra</p>
-            <p>Nagpur, India</p>
-            <a href="mailto:prafulmishra0203@gmail.com">prafulmishra0203@gmail.com</a>
-            <p>+91 7020670423</p>
-            <a href="https://bit.ly/prafulmishra-portfolio">Portfolio</a>
-            <a href="http://github.com/praful0203">GitHub</a>
-            <a href="http://linkedin.com/in/praful0203">LinkedIn</a>
+<div class="window">
+  <div class="titlebar">
+    <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+    <span class="filename">MainActivity.kt — Praful Mishra</span>
+  </div>
 
-            <h2>Skills</h2>
-            <ul>
-                <li><strong>Unreal Engine:</strong> Blueprints, C++, Datasmith, Pixel Streaming, Replication, REST APIs,
-                    UMG, Meta XR SDK, Meta XR Interaction SDK, OpenXR, Ultraleap, Point Cloud Data</li>
-                <li><strong>Unity 3D:</strong> ARFoundation, C#, Google ARCore, MRTK</li>
-                <li><strong>Android:</strong> Android SDK, Couchbase, Dagger2, Espresso, Firebase, Java, JUnit, Kotlin,
-                    KTor, Mockito, MVVM, RxJava, Sceneform SDK, SQLite</li>
-            </ul>
+  <div class="mobilenav">
+    <a href="#about">about.kt</a>
+    <a href="#experience">experience.kt</a>
+    <a href="#skills">skills.gradle</a>
+    <a href="#projects">projects.kt</a>
+    <a href="#awards">awards.kt</a>
+    <a href="#contact">contact.kt</a>
+  </div>
 
-            <h2>Certifications & Awards</h2>
-            <ul>
-                <li>UX Certification – Interaction Design Foundation</li>
-                <li>Semi-Finalist – XR Creator Hackathon (2025 – BharatXR, Wavelaps, Ministry of I&B)</li>
-                <li>League Extraordinaire Award – Globallogic (2023 & 2024)</li>
-                <li>Top 3 – 30Hacks, APAC Region (2022)</li>
-                <li>Top 20 (12th Rank) – Hack20 Global Flutter Hackathon (2020)</li>
-            </ul>
+  <div class="body">
+    <nav class="sidebar">
+      <a href="#about">about.kt</a>
+      <a href="#experience">experience.kt</a>
+      <a href="#skills">skills.gradle</a>
+      <a href="#projects">projects.kt</a>
+      <a href="#awards">awards.kt</a>
+      <a href="#contact">contact.kt</a>
+    </nav>
+
+    <main>
+      <section id="about">
+        <h1>Praful Mishra</h1>
+        <div class="tagline">// Senior Android Developer — Automotive &amp; Connected Systems</div>
+        <div class="code-block">
+          <span class="ann">class</span> <span class="kw">PrafulMishra</span> : SeniorAndroidDeveloper() {<br>
+          &nbsp;&nbsp;<span class="cmt">// 8+ years building production-grade Android apps</span><br>
+          &nbsp;&nbsp;<span class="cmt">// across automotive, EdTech, and enterprise domains</span><br>
+          &nbsp;&nbsp;<span class="kw">val</span> focus = <span class="str">"Clean Architecture, Jetpack Compose, offline-first systems"</span><br>
+          &nbsp;&nbsp;<span class="kw">val</span> differentiator = <span class="str">"Unreal Engine 5 / XR development"</span><br>
+          }
+        </div>
+        <div class="bio">
+          <p>I build reliable, production Android apps for real-world deployments — from a connected-car companion app for a German automotive client to an offline-first education app that held 99.8% uptime for rural schools on unreliable connectivity. Alongside that, I bring hands-on Unreal Engine 5 / XR experience, a less common combination of mobile depth and immersive-tech versatility.</p>
+        </div>
+      </section>
+
+      <section id="experience">
+        <h2>experience.kt <span class="cmt" style="font-weight:400;font-size:.8rem;">— git log --oneline</span></h2>
+
+        <div class="commit">
+          <div class="commit-dot"></div>
+          <div class="commit-body">
+            <div class="role">Senior Android Developer — GlobalLogic (German Automotive Client)</div>
+            <div class="meta">Aug 2025 – Present · Nagpur, India</div>
+            <div class="desc">Building a connected-car companion app (service subscriptions, vehicle status, repair requests) on Clean Architecture + Jetpack Compose. Cut PR review feedback from 2+ major / 5–10 minor comments to 0 major / 2–3 minor.</div>
+          </div>
         </div>
 
-        <div class="right-column">
-            <h1>Praful Mishra</h1>
-            <p><strong>Unreal Engine Developer | XR & Metaverse Enthusiast</strong></p>
-
-            <div class="section">
-                <h2>Summary</h2>
-                <p>Skilled Unreal Engine Developer with 2+ years of experience in XR, Metaverse, and Digital Twins using
-                    UE5, plus over 4 years in Android development. Known for delivering high-performance, immersive
-                    applications focusing on interactivity, optimization, and cross-platform XR design. Experienced in
-                    providing simulations and virtual experiences for enterprise use cases.</p>
-            </div>
-
-            <div class="section">
-                <h2>Work Experience</h2>
-                <h3>Associate Consultant – Unreal Engine Developer</h3>
-                <p><em>Globallogic, Nagpur | Aug 2019 – May 2025</em></p>
-                <ul>
-                    <li>Built immersive XR experiences using UE5 for industrial training, real estate, and simulation.
-                    </li>
-                    <li>Developed hand-tracked UI systems and performance-optimized applications for Meta Quest.</li>
-                    <li>Delivered scalable Android apps with Kotlin, MVVM, and CI/CD tools like Jenkins & AWS.</li>
-                </ul>
-
-                <h3>Software Engineer Trainee – Android Developer</h3>
-                <p><em>Mobileways, Hyderabad | Jul 2018 – Jan 2019</em></p>
-                <ul>
-                    <li>Built location and messaging apps with real-time backend integrations.</li>
-                    <li>Focused on performance, modularity, and responsive UI design.</li>
-                </ul>
-            </div>
-
-            <div class="section">
-                <h2>Projects</h2>
-                <ul>
-                    <li><strong>Nuclear Energy Plant Metaverse:</strong> VR experience for global powerplant ops and
-                        training powered by GenAI.</li>
-                    <li><strong>Real Estate XR:</strong> Immersive VR experience for construction process review and
-                        client demos.</li>
-                    <li><strong>DigitalTwinVR:</strong> Interactive annotation system for 3D models in VR.</li>
-                </ul>
-            </div>
-
-            <div class="section">
-                <h2>Education</h2>
-                <p><strong>Bachelor of Engineering in Computer Science</strong><br>
-                    Guru Nanak Institute of Engineering and Technology, Nagpur, India | Jul 2014 – Jun 2018</p>
-                <p><strong>HSC (12th)</strong><br>
-                    Kedar Singh Intermediate College, Kanpur, India | Mar 2014</p>
-            </div>
+        <div class="commit">
+          <div class="commit-dot" style="background:var(--purple);"></div>
+          <div class="commit-body">
+            <div class="role">XR Developer — Freelance (Real Estate Client, Dubai)</div>
+            <div class="meta">May 2025 – Jul 2025 · Remote</div>
+            <div class="desc">Built a high-fidelity PCVR real-estate showcase in Unreal Engine for Varjo, with OpenXR support across Meta Quest, Pico, and other devices.</div>
+          </div>
         </div>
-    </div>
+
+        <div class="commit">
+          <div class="commit-dot" style="background:var(--purple);"></div>
+          <div class="commit-body">
+            <div class="role">Unreal Engine Developer — GlobalLogic</div>
+            <div class="meta">Jul 2024 – May 2025 · Nagpur, India</div>
+            <div class="desc">Built XR/Metaverse applications (Meta Quest, HoloLens, PCVR, Desktop) using UE5 — digital twins, training simulations, and multiplayer experiences.</div>
+          </div>
+        </div>
+
+        <div class="commit">
+          <div class="commit-dot"></div>
+          <div class="commit-body">
+            <div class="role">Senior Software Engineer / Software Engineer — Android Developer — GlobalLogic</div>
+            <div class="meta">Aug 2019 – Jun 2024 · Nagpur, India</div>
+            <div class="desc">Built an offline-first Android app for rural schools with custom Wi-Fi hotspot sync. Reduced sync errors by 85%, maintained 99.8% uptime. Promoted twice.</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills">
+        <h2>skills.gradle</h2>
+        <div class="code-block">
+          dependencies {<br>
+          &nbsp;&nbsp;<span class="kw">implementation</span> <span class="str">'android:kotlin-java-clean-architecture'</span><br>
+          &nbsp;&nbsp;<span class="kw">implementation</span> <span class="str">'androidx.compose:jetpack-compose'</span><br>
+          &nbsp;&nbsp;<span class="kw">implementation</span> <span class="str">'androidx.navigation:navigation-component'</span><br>
+          &nbsp;&nbsp;<span class="kw">implementation</span> <span class="str">'kotlinx:coroutines'</span><br>
+          &nbsp;&nbsp;<span class="kw">implementation</span> <span class="str">'com.google.dagger:dagger'</span><br>
+          &nbsp;&nbsp;<span class="kw">implementation</span> <span class="str">'androidx.room:room, retrofit, workmanager'</span><br><br>
+          &nbsp;&nbsp;<span class="ann">testImplementation</span> <span class="str">'paparazzi, junit, detekt'</span><br><br>
+          &nbsp;&nbsp;<span class="cmt">// differentiator</span><br>
+          &nbsp;&nbsp;<span class="kw">implementation</span> <span class="str">'unrealengine:ue4-ue5-openxr-metaxr'</span><br><br>
+          &nbsp;&nbsp;<span class="kw">implementation</span> <span class="str">'firebase, aws, azure-devops, git, ci-cd'</span><br>
+          }
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2>projects.kt</h2>
+        <div class="proj">
+          <div class="name">SmartBuildingDigitalTwin.poc</div>
+          <div class="desc">High-performance Unreal Engine digital twin of an IoT-powered building — visitor access control, elevator management, predictive maintenance, fall detection, real-time cloud sync.</div>
+        </div>
+        <div class="proj">
+          <div class="name">NuclearPlantMetaverse.desktop</div>
+          <div class="desc">Desktop metaverse (UE, CAD, Datasmith, Point Cloud, Multiplayer) for global power-plant training. GenAI-powered document search cut training cost and time by 60%.</div>
+        </div>
+        <div class="proj">
+          <div class="name">VehicleCompanionApp.android</div>
+          <div class="desc">Connected-car companion app for a German automotive client — service subscriptions, live vehicle status, repair requests, built on Clean Architecture + Compose.</div>
+        </div>
+      </section>
+
+      <section id="awards">
+        <h2>awards.kt</h2>
+        <ul class="awards">
+          <li><span class="name">XRCC Online</span> — Winner, Community-Voting Track (2025) — "The Heirs of Kutch: Reviving Rogan," finalist among 34 teams, 160+ global submissions</li>
+          <li><span class="name">Unity Certified Associate: Programmer</span> (UCAP-720) — Unity Technologies</li>
+          <li><span class="name">League Extraordinaire Award</span> — GlobalLogic (2023 &amp; 2024)</li>
+          <li><span class="name">XR Creator Hackathon</span> — Semi-Finalist, BharatXR (2025)</li>
+          <li><span class="name">30Hacks APAC</span> — Top 3 Finish (2022)</li>
+        </ul>
+      </section>
+
+      <section id="contact">
+        <h2>contact.kt</h2>
+        <div class="terminal">
+          <div><span class="prompt">$</span> whoami</div>
+          <div style="margin:4px 0 14px;">Praful Mishra — Senior Android Developer, Nagpur, India</div>
+          <div><span class="prompt">$</span> contact --list</div>
+          <div class="row"><span class="label">email</span><a href="mailto:prafulmishra0203@gmail.com">prafulmishra0203@gmail.com</a></div>
+          <div class="row"><span class="label">github</span><a href="https://github.com/praful0203" target="_blank" rel="noopener">github.com/praful0203</a></div>
+          <div class="row"><span class="label">linkedin</span><a href="https://www.linkedin.com/in/praful0203" target="_blank" rel="noopener">linkedin.com/in/praful0203</a></div>
+          <div class="row"><span class="label">portfolio</span><a href="https://bit.ly/prafulmishra-portfolio" target="_blank" rel="noopener">prafulmishra-portfolio</a></div>
+          <div style="margin-top:14px;"><span class="prompt">$</span> <span class="cursor"></span></div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <footer>© 2026 Praful Mishra — built with Kotlin fluency and a healthy respect for Gradle sync times</footer>
+</div>
+
+<script>
+const sections = document.querySelectorAll('section');
+const links = document.querySelectorAll('nav.sidebar a, .mobilenav a');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => { if (scrollY >= s.offsetTop - 80) current = s.id; });
+  links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + current));
+});
+</script>
 </body>
-
 </html>
